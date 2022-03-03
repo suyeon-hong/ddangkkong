@@ -37,3 +37,9 @@ export const font50 = (weight: Weight) => css`
 	line-height: 1.4;
 	font-weight: ${weight};
 `;
+
+export const font60 = (weight: Weight) => css`
+	font-size: 60px;
+	line-height: 1.333;
+	font-weight: ${weight};
+`;
