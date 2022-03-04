@@ -1,9 +1,11 @@
 import * as S from "./Style";
 import Image from "next/image";
+import { Header } from "components/base";
 
 const Visual = () => {
 	return (
 		<S.Figure>
+			<Header />
 			<Image
 				src="/images/figure_bg.png"
 				alt="backgroundImage"
@@ -22,21 +24,23 @@ const Visual = () => {
 				<S.TextWrapper>
 					<p>책 읽는 재미,</p>
 					<p className="point">
-						<span className="text">땅콩스쿨이</span>
-						<Image
-							src="/images/star.png"
-							alt="star"
-							width={50}
-							height={50}
-							className="star"
-						/>
-						<Image
-							src="/images/line.png"
-							alt="line"
-							width={220}
-							height={11}
-							className="line"
-						/>
+						땅콩스쿨이
+						<span className="star">
+							<Image
+								src="/images/star.png"
+								alt="star"
+								layout="fill"
+								objectFit="cover"
+							/>
+						</span>
+						<span className="line">
+							<Image
+								src="/images/line.png"
+								alt="line"
+								layout="fill"
+								objectFit="cover"
+							/>
+						</span>
 					</p>
 					<p>만들어줄게요!</p>
 				</S.TextWrapper>

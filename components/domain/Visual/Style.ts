@@ -23,21 +23,19 @@ export const TextWrapper = styled.div`
 	.point {
 		position: relative;
 
-		span {
-			overflow: unset !important;
-		}
 		.star {
-			top: -70px !important;
-			left: -40px !important;
+			position: absolute;
+			top: -25px;
+			left: -20px;
+			width: 50px;
+			height: 50px;
 		}
 		.line {
-			left: -80px !important;
-			bottom: -30px !important;
-		}
-		.text {
 			position: absolute;
-			top: 0;
 			left: 0;
+			bottom: 0;
+			width: 220px;
+			height: 11px;
 		}
 	}
 `;
