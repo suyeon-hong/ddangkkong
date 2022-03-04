@@ -8,6 +8,7 @@ export const GlobalStyle = createGlobalStyle`
 		margin: 0;
 		box-sizing: border-box;
 	}
-  body { font-family: 'Noto Sans', 'Sans-serif';}
+  body { font-family: 'Noto Sans KR', sans-serif;}
+	ul,ol { list-style:none }
   a { cursor: pointer; text-decoration: none; }
 `;
