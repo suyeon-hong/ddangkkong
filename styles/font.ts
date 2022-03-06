@@ -1,6 +1,6 @@
 import { css } from "styled-components";
 
-type Weight = 400 | 500 | 700;
+type Weight = 300 | 400 | 500 | 700;
 
 export const font14 = (weight: Weight) => css`
 	font-size: 14px;
