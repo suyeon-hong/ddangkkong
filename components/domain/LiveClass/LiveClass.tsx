@@ -23,7 +23,7 @@ const LiveClass = () => {
 						src="/images/tablet.png"
 						alt="tablet"
 						layout="fill"
-						objectFit="contain"
+						objectFit="cover"
 					/>
 					<video src="/images/main_video.mp4" loop muted />
 				</S.ImgWrapper>

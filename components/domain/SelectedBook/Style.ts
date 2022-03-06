@@ -1,11 +1,11 @@
 import styled from "styled-components";
 import { flexbox, PageInner } from "styles/commonStyle";
-import { font50, font24 } from "styles/font";
+import { font24, font50 } from "styles/font";
 
 export const Section = styled.section`
 	width: 100%;
-	background: url(/images/bg.png) no-repeat center/cover;
-	padding: 175px 0;
+	padding: 150px 0;
+	background: ${({ theme }) => theme.colors.lightGray};
 `;
 
 export const Inner = styled.div`
@@ -22,17 +22,19 @@ export const Description = styled.p`
 	${font24(400)};
 `;
 
-export const ImgWrapper = styled.div`
-	position: relative;
-	width: 750px;
-	height: 574px;
+export const ImgContainer = styled.div`
+	${flexbox({ jc: "between" })};
+	gap: 100px;
+`;
 
-	video {
-		width: 645px;
-		object-fit: contain;
-		border-radius: 20px;
-		position: absolute;
-		top: 17px;
-		left: 25px;
-	}
+export const GifWrapper = styled.div`
+	position: relative;
+	height: 94px;
+	margin-bottom: 33px;
+`;
+
+export const BookImgWrapper = styled.div`
+	position: relative;
+	width: 150px;
+	height: 200px;
 `;
