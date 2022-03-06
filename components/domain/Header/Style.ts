@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { flexbox } from "styles/commonStyle";
+import { flexbox, PageInner } from "styles/commonStyle";
 import { font20 } from "styles/font";
 
 export const Header = styled.header`
@@ -12,8 +12,7 @@ export const Header = styled.header`
 `;
 
 export const Inner = styled.div`
-	max-width: ${({ theme }) => theme.breakPoint.tablet};
-	margin: 0 auto;
+	${PageInner};
 	${flexbox({ jc: "between", ai: "center" })}
 `;
 

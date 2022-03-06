@@ -36,3 +36,9 @@ export const flexbox = ({
 		align-items: ${getFlexValue(ai)};
 	`;
 };
+
+export const PageInner = css`
+	max-width: ${({ theme }) => theme.breakPoint.tablet};
+	margin: 0 auto;
+	padding: 0 30px;
+`;
