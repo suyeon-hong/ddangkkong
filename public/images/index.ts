@@ -5,3 +5,8 @@ export { default as book1 } from "./book1.png";
 export { default as book2 } from "./book2.png";
 export { default as book3 } from "./book3.png";
 export { default as liveReading } from "./liveReading.png";
+export { default as daily1 } from "./daily1.png";
+export { default as daily2 } from "./daily2.png";
+export { default as daily3 } from "./daily3.png";
+export { default as daily4 } from "./daily4.png";
+export { default as mobile } from "./mobile.png";
