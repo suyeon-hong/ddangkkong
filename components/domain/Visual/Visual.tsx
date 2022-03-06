@@ -1,11 +1,9 @@
 import * as S from "./Style";
 import Image from "next/image";
-import { Header } from "components/base";
 
 const Visual = () => {
 	return (
 		<S.Figure>
-			<Header />
 			<Image
 				src="/images/figure_bg.png"
 				alt="backgroundImage"
