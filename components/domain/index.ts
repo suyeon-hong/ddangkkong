@@ -9,3 +9,4 @@ export { default as BestSeller } from "./BestSeller/BestSeller";
 export { default as Features } from "./Features/Features";
 export { default as SlideBanner } from "./SlideBanner/SlideBanner";
 export { default as Coupon } from "./Coupon/Coupon";
+export { default as Footer } from "./Footer/Footer";
