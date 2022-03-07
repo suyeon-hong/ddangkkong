@@ -7,3 +7,4 @@ export { default as LiveReading } from "./LiveReading/LiveReading";
 export { default as DailyReading } from "./DailyReading/DailyReading";
 export { default as BestSeller } from "./BestSeller/BestSeller";
 export { default as Features } from "./Features/Features";
+export { default as SlideBanner } from "./SlideBanner/SlideBanner";
