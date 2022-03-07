@@ -8,3 +8,4 @@ export { default as DailyReading } from "./DailyReading/DailyReading";
 export { default as BestSeller } from "./BestSeller/BestSeller";
 export { default as Features } from "./Features/Features";
 export { default as SlideBanner } from "./SlideBanner/SlideBanner";
+export { default as Coupon } from "./Coupon/Coupon";
