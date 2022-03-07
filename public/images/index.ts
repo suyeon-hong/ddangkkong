@@ -28,3 +28,4 @@ export { default as bidirectional } from "./bidirectional.png";
 export { default as character } from "./character.png";
 export { default as logo } from "./logo.svg";
 export { default as slide_img } from "./slide_img.png";
+export { default as download } from "./download.png";
