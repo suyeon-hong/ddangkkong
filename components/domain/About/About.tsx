@@ -1,17 +1,9 @@
 import * as S from "./Style";
-import Image from "next/image";
 
 const About = () => {
 	return (
 		<S.Section>
-			<S.ImgWrapper>
-				<Image
-					src="/images/logo.png"
-					alt="logo"
-					layout="fill"
-					objectFit="cover"
-				/>
-			</S.ImgWrapper>
+			<S.ImgBox />
 			<h2>땅콩스쿨이란?</h2>
 			<p>
 				실시간(LIVE)으로, 아이들이 좋아하는 캐릭터 선생님을 통해,

@@ -1,6 +1,14 @@
 import styled from "styled-components";
 import { font24, font50 } from "styles/font";
 
+export const ImgBox = styled.div`
+	position: relative;
+	width: 94px;
+	height: 60px;
+	margin: 0 auto;
+	margin-bottom: 30px;
+`;
+
 export const Section = styled.section`
 	width: 100%;
 	padding: 150px 0;
@@ -16,12 +24,10 @@ export const Section = styled.section`
 	p {
 		${font24(500)};
 	}
-`;
 
-export const ImgWrapper = styled.div`
-	position: relative;
-	width: 94px;
-	height: 60px;
-	margin: 0 auto;
-	margin-bottom: 30px;
+	&.active {
+		${ImgBox} {
+			background: url("images/logo_animation.gif") no-repeat center/cover;
+		}
+	}
 `;
