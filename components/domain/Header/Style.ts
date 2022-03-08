@@ -8,9 +8,15 @@ export const Header = styled.header`
 	top: 0;
 	left: 0;
 	z-index: 10;
+
+	&.active {
+		background: ${({ theme }) => theme.colors.white};
+		color: ${({ theme }) => theme.colors.primary};
+	}
 `;
 
 export const Inner = styled.div`
 	${PageInner};
-	${flexbox({ jc: "between", ai: "center" })}
+	height: 100%;
+	${flexbox({ jc: "between", ai: "center" })};
 `;

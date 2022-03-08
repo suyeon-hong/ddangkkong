@@ -2,12 +2,8 @@ import styled from "styled-components";
 import { font16 } from "styles/font";
 import { flexbox } from "styles/commonStyle";
 
-export const GNB = styled.nav`
-	${flexbox}
-`;
-
 export const MainMenu = styled.ul`
-	${flexbox}
+	${flexbox};
 
 	li {
 		${font16(400)};
@@ -33,6 +29,24 @@ export const UtilMenu = styled(MainMenu)`
 			left: -50px;
 			transform: translateY(-50%);
 			cursor: auto;
+		}
+	}
+`;
+
+export const GNB = styled.nav`
+	${flexbox};
+
+	&.active {
+		${MainMenu} {
+			li {
+				color: ${({ theme }) => theme.colors.primary};
+			}
+		}
+		${UtilMenu} {
+			li:first-child::before {
+				background: ${({ theme }) => theme.colors.primary};
+				opacity: 0.3;
+			}
 		}
 	}
 `;
