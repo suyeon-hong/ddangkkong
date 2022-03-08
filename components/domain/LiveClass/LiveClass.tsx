@@ -1,9 +1,35 @@
 import Image from "next/image";
+import { useRef, useEffect, MutableRefObject, useState } from "react";
 import * as S from "./Style";
 
-const LiveClass = () => {
+interface LiveClassProps {
+	scrollY: number;
+}
+
+const LiveClass = ({ scrollY }: LiveClassProps) => {
+	const sectionRef = useRef() as MutableRefObject<HTMLDivElement>;
+	const vidRef = useRef() as MutableRefObject<HTMLVideoElement>;
+	const [isActive, setIsActive] = useState(false);
+
+	const checkIsActive = () => {
+		if (sectionRef.current) {
+			const sectionNode = sectionRef.current;
+
+			if (sectionNode.classList.contains("active")) {
+				setIsActive(true);
+			} else {
+				setIsActive(false);
+			}
+		}
+	};
+
+	useEffect(() => {
+		checkIsActive();
+		isActive && vidRef.current.play();
+	}, [scrollY, isActive]);
+
 	return (
-		<S.Section>
+		<S.Section ref={sectionRef}>
 			<S.Inner>
 				<div>
 					<S.Title>
@@ -25,7 +51,7 @@ const LiveClass = () => {
 						layout="fill"
 						objectFit="cover"
 					/>
-					<video src="/images/main_video.mp4" loop muted />
+					<video ref={vidRef} src="/images/main_video.mp4" loop muted />
 				</S.ImgWrapper>
 			</S.Inner>
 		</S.Section>
