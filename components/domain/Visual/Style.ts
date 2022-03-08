@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { font60 } from "styles/font";
 
 export const Figure = styled.figure`
@@ -20,23 +20,41 @@ export const TextWrapper = styled.div`
 	${font60(700)};
 	color: ${({ theme }) => theme.colors.white};
 
-	.point {
+	p {
 		position: relative;
+	}
+`;
 
-		.star {
-			position: absolute;
-			top: -25px;
-			left: -20px;
-			width: 50px;
-			height: 50px;
-		}
-		.line {
-			position: absolute;
-			left: 0;
-			bottom: 0;
-			width: 220px;
-			height: 11px;
-		}
+export const iconStar = styled.span`
+	position: absolute;
+	top: -15px;
+	left: -20px;
+	width: 50px;
+	height: 50px;
+	background: url(/images/star.png) no-repeat center/cover;
+`;
+
+export const iconLine = styled.span`
+	position: absolute;
+	left: 0;
+	bottom: -5px;
+	width: 220px;
+	height: 11px;
+	background: url(/images/line.png) no-repeat center/cover;
+`;
+
+const MouseMotion = keyframes`
+	0%{
+		transform: translateY(0px)
+	}
+	20%{
+		transform: translateY(-40px)
+	}
+	70%{
+		transform: translateY(-40px)
+	}
+	100%{
+		transform: translateY(0px)
 	}
 `;
 
@@ -45,4 +63,5 @@ export const imgWrapper = styled.div`
 	bottom: 50px;
 	left: 50%;
 	cursor: pointer;
+	animation: ${MouseMotion} 1.2s infinite ease-in-out;
 `;

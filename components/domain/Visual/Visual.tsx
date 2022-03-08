@@ -10,6 +10,7 @@ const Visual = () => {
 				layout="fill"
 				objectFit="cover"
 				property="true"
+				priority
 			/>
 			<Image
 				src="/images/figure.png"
@@ -21,24 +22,10 @@ const Visual = () => {
 			<S.pageInner>
 				<S.TextWrapper>
 					<p>책 읽는 재미,</p>
-					<p className="point">
+					<p>
 						땅콩스쿨이
-						<span className="star">
-							<Image
-								src="/images/star.png"
-								alt="star"
-								layout="fill"
-								objectFit="cover"
-							/>
-						</span>
-						<span className="line">
-							<Image
-								src="/images/line.png"
-								alt="line"
-								layout="fill"
-								objectFit="cover"
-							/>
-						</span>
+						<S.iconStar className="star" />
+						<S.iconLine className="line" />
 					</p>
 					<p>만들어줄게요!</p>
 				</S.TextWrapper>
