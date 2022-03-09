@@ -8,7 +8,14 @@ function MyApp({ Component, pageProps }: AppProps) {
 	return (
 		<>
 			<Head>
-				<title></title>
+				<title>땅콩스쿨</title>
+				<meta name="title" content="땅콩스쿨 클론" />
+				<meta
+					name="description"
+					content="땅콩스쿨 웹사이트를 클론한 사이트입니다."
+				/>
+				<meta name="viewport" content="width=device-width,user-scalable=no" />
+				<link rel="shortcut icon" type="image/png" href="favicon.ico" />
 			</Head>
 			<ThemeProvider theme={theme}>
 				<GlobalStyle />
