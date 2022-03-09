@@ -18,6 +18,7 @@ const Visual = () => {
 				layout="fill"
 				objectFit="cover"
 				property="true"
+				priority
 			/>
 			<S.pageInner>
 				<S.TextWrapper>
