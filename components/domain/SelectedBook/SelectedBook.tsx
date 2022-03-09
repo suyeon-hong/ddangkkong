@@ -1,28 +1,4 @@
 import * as S from "./Style";
-import Image from "next/image";
-import { check1, check2, check3, book1, book2, book3 } from "public/images";
-import { useEffect, useRef } from "react";
-
-const imgList = [
-	{
-		gifSrc: check1,
-		gitAlt: "check1",
-		ImgSrc: book1,
-		ImgAlt: "book1",
-	},
-	{
-		gifSrc: check2,
-		gitAlt: "check2",
-		ImgSrc: book2,
-		ImgAlt: "book2",
-	},
-	{
-		gifSrc: check3,
-		gitAlt: "check3",
-		ImgSrc: book3,
-		ImgAlt: "book3",
-	},
-];
 
 const SelectedBook = () => {
 	return (
@@ -41,19 +17,18 @@ const SelectedBook = () => {
 					</S.Description>
 				</div>
 				<S.ImgContainer>
-					{imgList.map((data, index) => (
-						<S.Imgbox key={index}>
-							<S.GifBox />
-							<S.BookImgWrapper>
-								<Image
-									src={data.ImgSrc}
-									alt={data.ImgAlt}
-									layout="fill"
-									objectFit="cover"
-								/>
-							</S.BookImgWrapper>
-						</S.Imgbox>
-					))}
+					<S.Imgbox>
+						<S.GifBox />
+						<S.BookImg index={1}></S.BookImg>
+					</S.Imgbox>
+					<S.Imgbox>
+						<S.GifBox />
+						<S.BookImg index={2}></S.BookImg>
+					</S.Imgbox>
+					<S.Imgbox>
+						<S.GifBox />
+						<S.BookImg index={3}></S.BookImg>
+					</S.Imgbox>
 				</S.ImgContainer>
 			</S.Inner>
 		</S.Section>

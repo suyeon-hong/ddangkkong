@@ -69,8 +69,14 @@ export const ImgContainer = styled.div`
 	gap: 100px;
 `;
 
-export const BookImgWrapper = styled.div`
+interface BookImgProps {
+	index: number;
+}
+
+export const BookImg = styled.div<BookImgProps>`
 	position: relative;
 	width: 150px;
 	height: 200px;
+	background: ${({ index }) =>
+		`url("/images/book${index}.png") no-repeat center/cover`};
 `;
