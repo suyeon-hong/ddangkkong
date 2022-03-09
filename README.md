@@ -1,6 +1,6 @@
 # Next.js 기반으로 스크롤 이벤트를 적용한 웹사이트
 
-🚀 [배포사이트](https://gracious-payne-23fbe4.netlify.app/)
+🚀 [배포사이트](https://ddangkkong.netlify.app/)
 
 <br>
 
