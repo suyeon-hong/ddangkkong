@@ -9,7 +9,7 @@ export const Section = styled.section`
 	background: url(/images/slide_bg.png) no-repeat center/cover;
 `;
 
-export const Bg = styled.div`
+export const Background = styled.div`
 	width: 100%;
 	height: 100%;
 	position: absolute;
@@ -51,10 +51,11 @@ export const ImgWrapper = styled.div`
 	display: inline-block;
 `;
 
-export const AvatarWrapper = styled.div`
+export const Avatar = styled.div`
 	position: absolute;
 	top: 0;
 	right: 0;
 	width: 116.6px;
 	height: 100%;
+	background: url("./images/slide_img.png") no-repeat center/cover;
 `;

@@ -6,6 +6,7 @@ const addTransition = (index: number) => {
 	return css`
 		&:nth-child(${index}) {
 			transition-delay: ${index * 0.5}s;
+			background: url("/images/bookmark${index}.png") no-repeat center/cover;
 		}
 	`;
 };

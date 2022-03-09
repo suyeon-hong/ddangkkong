@@ -1,4 +1,4 @@
-import { logo, slide_img } from "public/images";
+import { logo } from "public/images";
 import * as S from "./Style";
 import Image from "next/image";
 import { Slick } from "components/base";
@@ -6,7 +6,7 @@ import { Slick } from "components/base";
 const SlideBanner = () => {
 	return (
 		<S.Section>
-			<S.Bg />
+			<S.Background />
 			<Slick className="slideBanner">
 				{comments.map((data, index) => (
 					<S.Inner key={index}>
@@ -14,14 +14,7 @@ const SlideBanner = () => {
 							<S.ImgWrapper>
 								<Image src={logo} alt="logo" layout="fill" objectFit="cover" />
 							</S.ImgWrapper>
-							<S.AvatarWrapper>
-								<Image
-									src={slide_img}
-									alt="avatar"
-									layout="fill"
-									objectFit="contain"
-								/>
-							</S.AvatarWrapper>
+							<S.Avatar />
 						</S.ImgContainer>
 						<span>{data.id}</span>
 						<p>{data.con}</p>

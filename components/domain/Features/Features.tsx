@@ -1,12 +1,5 @@
 import * as S from "./Style";
-import {
-	bookmark1,
-	bookmark2,
-	bookmark3,
-	videoclass,
-	bidirectional,
-	character,
-} from "public/images";
+import { videoclass, bidirectional, character } from "public/images";
 import Image from "next/image";
 
 const Features = () => {
@@ -17,14 +10,6 @@ const Features = () => {
 				<S.BookmarkContainer>
 					{bookmarkList.map((data, index) => (
 						<S.BookmarkWrapper key={index}>
-							<S.BgImg imgSrc={data.bgSrc}>
-								<Image
-									src={data.bgSrc}
-									alt="bookmark"
-									layout="fill"
-									objectFit="cover"
-								/>
-							</S.BgImg>
 							<S.ContentsWrapper>
 								<S.IconWrapper>
 									<Image
@@ -47,21 +32,18 @@ const Features = () => {
 
 const bookmarkList = [
 	{
-		bgSrc: bookmark1,
 		iconSrc: videoclass,
 		title: "화상수업",
 		description:
 			"휴대폰이나 태블릿으로 시간이나 장소 관계없이 편하게 수업을 들어보세요.",
 	},
 	{
-		bgSrc: bookmark2,
 		iconSrc: bidirectional,
 		title: "양방향",
 		description:
 			"화면에 그림도 그려보고, 읽은 책으로 선생님과 퀴즈도 풀어보는 양방향 수업을 경험해보세요.",
 	},
 	{
-		bgSrc: bookmark3,
 		iconSrc: character,
 		title: "화상수업",
 		description: "친숙한 캐릭터와 목소리로 수업에 대한 부담을 낮춰보세요.",
