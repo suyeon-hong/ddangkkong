@@ -28,9 +28,15 @@ export const SliderWrapper = styled.div`
 `;
 
 export const SliderInner = styled.div`
-	width: calc((150px * 10) + (50px * 9));
+	width: calc((150px * 12) + (50px * 11));
 	${flexbox};
-	gap: 50px;
+	margin-left: 0px;
+	transition: 0s;
+
+	&.active {
+		margin-left: -200px;
+		transition: 1s;
+	}
 `;
 
 export const ImgWrapper = styled.div`
@@ -38,4 +44,6 @@ export const ImgWrapper = styled.div`
 	width: 150px;
 	height: 200px;
 	border-radius: 10px;
+	overflow: hidden;
+	margin: 0 25px;
 `;

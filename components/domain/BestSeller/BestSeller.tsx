@@ -9,11 +9,39 @@ import {
 	best7,
 	best8,
 	best9,
-	best10,
 } from "public/images";
 import Image from "next/image";
+import { useRef, RefObject, useEffect } from "react";
 
 const BestSeller = () => {
+	const sliderRef = useRef() as RefObject<HTMLDivElement>;
+	const slider = sliderRef.current;
+
+	const changeImgOrder = (firstImg: Element | null | undefined) => {
+		if (slider && firstImg) {
+			slider.append(firstImg);
+		}
+	};
+
+	const moving = () => {
+		slider?.animate([{ marginLeft: "0px" }, { marginLeft: "-200px" }], {
+			duration: 2000,
+			iterations: Infinity,
+		});
+
+		setInterval(() => {
+			const firstImg = slider?.firstElementChild;
+
+			setTimeout(() => {
+				changeImgOrder(firstImg);
+			}, 2000);
+		});
+	};
+
+	useEffect(() => {
+		moving();
+	});
+
 	return (
 		<S.Section>
 			<S.Inner>
@@ -29,9 +57,9 @@ const BestSeller = () => {
 				</S.Description>
 			</S.Inner>
 			<S.SliderWrapper>
-				<S.SliderInner>
+				<S.SliderInner ref={sliderRef}>
 					{sliderList.map((data, index) => (
-						<S.ImgWrapper key={index}>
+						<S.ImgWrapper key={index} className="imgWrapper">
 							<Image
 								src={data.imgSrc}
 								alt={data.alt}
@@ -84,8 +112,16 @@ const sliderList = [
 		alt: "냉장고 먹는 괴물",
 	},
 	{
-		imgSrc: best10,
-		alt: "고릴라",
+		imgSrc: best1,
+		alt: "커다란 순무",
+	},
+	{
+		imgSrc: best2,
+		alt: "청개구리 거울",
+	},
+	{
+		imgSrc: best3,
+		alt: "일기 쓰고 싶은 날",
 	},
 ];
 

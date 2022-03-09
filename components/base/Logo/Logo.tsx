@@ -13,7 +13,7 @@ const Logo = ({ isScrollActive }: LogoProps) => {
 					src="/images/logo.png"
 					alt="logo"
 					layout="fill"
-					objectFit="cover"
+					objectFit="contain"
 				/>
 			</S.Icon>
 			<h1>땅콩스쿨</h1>

@@ -12,6 +12,7 @@ export const Header = styled.header`
 	&.active {
 		background: ${({ theme }) => theme.colors.white};
 		color: ${({ theme }) => theme.colors.primary};
+		box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
 	}
 `;
 
