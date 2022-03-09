@@ -1,6 +1,7 @@
 import * as S from "./Style";
 import Image from "next/image";
 import { check1, check2, check3, book1, book2, book3 } from "public/images";
+import { useEffect, useRef } from "react";
 
 const imgList = [
 	{
@@ -41,15 +42,8 @@ const SelectedBook = () => {
 				</div>
 				<S.ImgContainer>
 					{imgList.map((data, index) => (
-						<div key={index}>
-							<S.GifWrapper>
-								<Image
-									src={data.gifSrc}
-									alt={data.gitAlt}
-									layout="fill"
-									objectFit="contain"
-								/>
-							</S.GifWrapper>
+						<S.Imgbox key={index}>
+							<S.GifBox />
 							<S.BookImgWrapper>
 								<Image
 									src={data.ImgSrc}
@@ -58,7 +52,7 @@ const SelectedBook = () => {
 									objectFit="cover"
 								/>
 							</S.BookImgWrapper>
-						</div>
+						</S.Imgbox>
 					))}
 				</S.ImgContainer>
 			</S.Inner>
