@@ -21,9 +21,7 @@ export const Bg = styled.div`
 
 export const Inner = styled.div`
 	${PageInner};
-	max-width: 848px;
 	text-align: center;
-	position: relative;
 
 	span {
 		display: block;
@@ -59,21 +57,4 @@ export const AvatarWrapper = styled.div`
 	right: 0;
 	width: 116.6px;
 	height: 100%;
-`;
-
-export const PrevBtn = styled.div`
-	position: absolute;
-	top: 50%;
-	left: 10.417vw;
-	width: 32px;
-	height: 32px;
-	margin-top: -16px;
-	background: url(images/prev.png) no-repeat center/cover;
-	cursor: pointer;
-`;
-
-export const NextBtn = styled(PrevBtn)`
-	left: auto;
-	right: 10.417vw;
-	transform: rotate(180deg);
 `;
