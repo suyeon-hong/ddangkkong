@@ -1,34 +1,41 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Next.js 기반으로 스크롤 이벤트를 적용한 웹사이트
 
-## Getting Started
+🚀 [배포사이트](https://gracious-payne-23fbe4.netlify.app/)
 
-First, run the development server:
+<br>
 
-```bash
-npm run dev
-# or
-yarn dev
+### 👀 프로젝트 빌드 및 실행 방법
+
+1. 상단 `Code` 버튼을 눌러 레포지토리를 클론 받습니다.
+
+```
+$ git clone https://github.com/wanted-team2/4week_kukka.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. 패키지를 설치합니다.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+```
+$ yarn install
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+3. 서버를 실행합니다.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+```
+$ yarn start:webpack
+```
 
-## Learn More
+<br>
 
-To learn more about Next.js, take a look at the following resources:
+### 📝 구현 목록
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- 땅콩스쿨 메인페이지와 동일하게 구현
+- BestSeller 컴포넌트 | 무한루프슬라이드 구현
+- SlideBanner 컴포넌트 | react-slick 라이브러리 이용, 캐러샐 구현
+- 스크롤이벤트 구현
+  - Header | 스타일 변경
+  - Visual 컴포넌트 | mouse icon 모션
+  - About 컴포넌트 | logo_animation 동작
+  - LiveClass 컴포넌트 | 동영상 재생
+  - SelectedBook 컴포넌트 | 체크 gif 순차적으로 재생
+  - Features 컴포넌트 | 북마크이미지 아래에서 위로 이동하며 순차적으로 나타나는 모션
+  - Coupon 컴포넌트 | 앱 다운로드하기 버튼 아래로 이동, 말풍선 위에서 아래로 이동하며 나타나는 모션
