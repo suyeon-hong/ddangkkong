@@ -17,14 +17,14 @@ const Features = () => {
 				<S.BookmarkContainer>
 					{bookmarkList.map((data, index) => (
 						<S.BookmarkWrapper key={index}>
-							<S.BgImgWrapper>
+							<S.BgImg imgSrc={data.bgSrc}>
 								<Image
 									src={data.bgSrc}
 									alt="bookmark"
 									layout="fill"
 									objectFit="cover"
 								/>
-							</S.BgImgWrapper>
+							</S.BgImg>
 							<S.ContentsWrapper>
 								<S.IconWrapper>
 									<Image

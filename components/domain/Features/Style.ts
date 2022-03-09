@@ -1,12 +1,40 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { flexbox, PageInner } from "styles/commonStyle";
 import { font20, font30, font50 } from "styles/font";
 
-export const Section = styled.div`
+const addTransition = (index: number) => {
+	return css`
+		&:nth-child(${index}) {
+			transition-delay: ${index * 0.5}s;
+		}
+	`;
+};
+
+export const BookmarkWrapper = styled.div`
+	position: relative;
+	width: 380px;
+	height: 643px;
+	transform: translateY(100px);
+	transition-duration: 0.6s;
+	opacity: 0;
+
+	${addTransition(1)};
+	${addTransition(2)};
+	${addTransition(3)};
+`;
+
+export const Section = styled.section`
 	width: 100%;
 	padding: 150px 0 0;
 	background: ${({ theme }) => theme.colors.lightGray};
 	text-align: center;
+
+	&.active {
+		${BookmarkWrapper} {
+			transform: translateY(0px);
+			opacity: 1;
+		}
+	}
 `;
 
 export const Inner = styled.div`
@@ -22,18 +50,17 @@ export const BookmarkContainer = styled.div`
 	${flexbox};
 `;
 
-export const BookmarkWrapper = styled.div`
-	position: relative;
-	width: 380px;
-	height: 643px;
-`;
+interface BgImgProps {
+	imgSrc: StaticImageData;
+}
 
-export const BgImgWrapper = styled.div`
+export const BgImg = styled.div<BgImgProps>`
 	position: absolute;
 	top: 0;
 	left: 0;
 	width: 100%;
 	height: 100%;
+	background: ${({ imgSrc }) => `url(${imgSrc})`};
 `;
 
 export const ContentsWrapper = styled.div`
